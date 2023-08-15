@@ -11,11 +11,14 @@
 script = ExtResource("1_u8b11")
 
 [node name="Character" parent="." instance=ExtResource("2_6jcgq")]
-position = Vector2(340, 219)
+show_behind_parent = true
+top_level = true
+position = Vector2(340, 217)
+speed = 800
 jump_force = 900
 
 [node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(611, 620)
+position = Vector2(402, 449)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 modulate = Color(0.0470588, 0.164706, 0.34902, 1)
@@ -27,7 +30,7 @@ scale = Vector2(50, 2.4)
 shape = SubResource("RectangleShape2D_w2fw1")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(1578, 464)
+position = Vector2(1591, 227)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
 modulate = Color(0.0470588, 0.164706, 0.34902, 1)
@@ -35,5 +38,17 @@ scale = Vector2(1000, 50)
 mesh = SubResource("QuadMesh_usvxq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+scale = Vector2(50, 2.4)
+shape = SubResource("RectangleShape2D_w2fw1")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(301, 37)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
+modulate = Color(0.0470588, 0.164706, 0.34902, 1)
+scale = Vector2(1000, 50)
+mesh = SubResource("QuadMesh_usvxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
 scale = Vector2(50, 2.4)
 shape = SubResource("RectangleShape2D_w2fw1")
